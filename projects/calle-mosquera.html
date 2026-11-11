@@ -15,10 +15,32 @@
   <meta property="og:image" content="https://www.sbconstructions.es/assets/calle-mosquera-01.jpg">
   <meta property="og:image:alt" content="Calle Mosquera completed project">
   <meta name="twitter:card" content="summary_large_image">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    try {
+      if (localStorage.getItem('sb-constructions-ads-consent-v1') === 'accepted') {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+          analytics_storage: 'granted'
+        });
+      }
+    } catch (_) {}
+    gtag('js', new Date());
+  </script>
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TQXJNLLV"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css?v=20261111">
+  <link rel="stylesheet" href="../styles.css?v=20261111b">
   <link rel="stylesheet" href="../consent.css">
 </head>
 <body class="portfolio-page project-detail-page">
@@ -26,7 +48,7 @@
   <header class="site-header" id="top">
     <a class="brand" href="../index.html" aria-label="SB Constructions, home"><img src="../assets/sb-constructions-white.png" alt="" width="1000" height="228"></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu"><span></span><span></span></button>
-    <nav id="main-nav" aria-label="Main navigation"><a href="../index.html#about">About</a><a href="../index.html#services">Expertise</a><a href="../projects.html" aria-current="page">Projects</a><a href="../index.html#approach">Approach</a><a class="nav-contact" href="../index.html#contact">Let's talk <span aria-hidden="true">↗</span></a></nav>
+    <nav id="main-nav" aria-label="Main navigation"><a href="../index.html#about">About</a><a href="../index.html#services">Expertise</a><a href="../projects.html" aria-current="page">Projects</a><a href="../index.html#approach">Approach</a><a href="../index.html#team">Team</a><a class="nav-contact" href="../index.html#contact">Let's talk <span aria-hidden="true">↗</span></a></nav>
   </header>
   <main id="main">
     <section class="detail-hero"><img src="../assets/calle-mosquera-01.jpg" alt="Calle Mosquera completed project" fetchpriority="high"><div class="portfolio-hero-shade"></div><div class="wrap detail-hero-content"><a class="back-link" href="../projects.html">← ALL PROJECTS</a><span class="detail-kicker">Centro Histórico · Málaga / Building refurbishment</span><h1>Calle Mosquera</h1></div></section>

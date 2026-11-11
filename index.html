@@ -37,10 +37,32 @@
     "areaServed": ["Marbella", "Estepona", "Málaga", "Costa del Sol"]
   }
   </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    try {
+      if (localStorage.getItem('sb-constructions-ads-consent-v1') === 'accepted') {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+          analytics_storage: 'granted'
+        });
+      }
+    } catch (_) {}
+    gtag('js', new Date());
+  </script>
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TQXJNLLV"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261111">
+  <link rel="stylesheet" href="styles.css?v=20261111b">
   <link rel="stylesheet" href="consent.css">
 </head>
 <body>
@@ -48,7 +70,7 @@
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="SB Constructions, home"><img src="assets/sb-constructions-white.png" alt="" width="1000" height="228"></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu"><span></span><span></span></button>
-    <nav id="main-nav" aria-label="Main navigation"><a href="#about">About</a><a href="#services">Expertise</a><a href="#projects">Projects</a><a href="#approach">Approach</a><a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a></nav>
+    <nav id="main-nav" aria-label="Main navigation"><a href="#about">About</a><a href="#services">Expertise</a><a href="#projects">Projects</a><a href="#approach">Approach</a><a href="#team">Team</a><a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a></nav>
   </header>
 
   <main id="main">
@@ -102,7 +124,20 @@
 
     <section class="approach-section section-pad" id="approach"><div class="wrap approach-grid"><div><div class="section-label"><span class="eyebrow-line"></span> 04 / OUR APPROACH</div><h2>Every detail.<br>Every <em>step.</em></h2><p>Great homes are the result of decisions made well, from the first conversation to the finishing touches.</p></div><div class="approach-steps"><div><span>01</span><h3>Understand</h3><p>We start by listening to your ambitions and understanding the property, its setting and its possibilities.</p></div><div><span>02</span><h3>Plan</h3><p>We bring the right expertise together and shape a clear route from idea to build.</p></div><div><span>03</span><h3>Build</h3><p>Our construction team carries the vision through with attention to quality, materials and detail.</p></div></div></div></section>
 
-    <section class="contact-section" id="contact"><div class="wrap contact-layout"><div class="contact-inner"><div class="section-label"><span class="eyebrow-line"></span> 05 / GET IN TOUCH</div><h2>Let's build<br><em>something exceptional.</em></h2><p>Have a project in mind? Tell us what you are planning. Our team will contact you directly.</p><div class="contact-details"><a href="tel:+34679285924">+34 679 285 924</a><span>Avenida Ricardo Soriano 4<br>29601 Marbella, Spain</span></div></div><form class="lead-form" id="lead-form" novalidate><h3>Tell us about your project</h3><p>Share a few details and we will be in touch.</p><div class="form-grid"><label>Full name <span>*</span><input name="name" type="text" autocomplete="name" minlength="2" maxlength="120" required></label><label>Email address <span>*</span><input name="email" type="email" autocomplete="email" maxlength="254" required></label><label>Phone number<input name="phone" type="tel" autocomplete="tel" maxlength="50"></label><label>Project type <span>*</span><select name="projectType" required><option value="">Select a service</option><option value="New-build villa">New-build villa</option><option value="Complete renovation">Complete renovation</option><option value="Interiors and finishes">Interiors and finishes</option><option value="Commercial project">Commercial project</option><option value="Other">Other</option></select></label></div><label>Project location<input name="location" type="text" maxlength="120" placeholder="e.g. Marbella, Estepona"></label><label>Tell us about your plans <span>*</span><textarea name="message" rows="5" minlength="10" maxlength="3000" required></textarea></label><label class="form-consent"><input name="consent" type="checkbox" required><span>I agree that SB Constructions may use my details to respond to this enquiry. <strong>*</strong></span></label><div class="form-honeypot" aria-hidden="true"><label>Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label></div><button class="button button-cream" type="submit">Send enquiry <span aria-hidden="true">↗</span></button><p class="form-status" role="status" aria-live="polite"></p></form></div></section>
+    <section class="team-section section-pad" id="team" aria-labelledby="team-title">
+      <div class="wrap">
+        <div class="team-heading"><div><div class="section-label"><span class="eyebrow-line"></span> 05 / OUR TEAM</div><h2 id="team-title">The people behind<br><em>the work.</em></h2></div><p>From the first conversation to the final finish, our team brings experience and care to every project.</p></div>
+        <div class="team-grid">
+          <article class="team-card"><img src="assets/team-joel-hansson.jpg" alt="Joel Hansson" loading="lazy"><div class="team-card-info"><h3>Joel Hansson</h3><p>Director</p></div></article>
+          <article class="team-card"><img src="assets/team-yirli-orozco.jpg" alt="Yirli Orozco" loading="lazy"><div class="team-card-info"><h3>Yirli Orozco</h3><p>Administration</p></div></article>
+          <article class="team-card"><img src="assets/team-ramon-gonzales.jpg" alt="Ramon Gonzales" loading="lazy"><div class="team-card-info"><h3>Ramon Gonzales</h3><p>Site Leader</p></div></article>
+          <article class="team-card"><img src="assets/team-juan-carlos.jpg" alt="Juan Carlos" loading="lazy"><div class="team-card-info"><h3>Juan Carlos</h3><p>Mason</p></div></article>
+          <article class="team-card"><img src="assets/team-francisco-caballero.jpg" alt="Francisco Caballero" loading="lazy"><div class="team-card-info"><h3>Francisco Caballero</h3><p>Painting &amp; Finishing</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact"><div class="wrap contact-layout"><div class="contact-inner"><div class="section-label"><span class="eyebrow-line"></span> 06 / GET IN TOUCH</div><h2>Let's build<br><em>something exceptional.</em></h2><p>Have a project in mind? Tell us what you are planning. Our team will contact you directly.</p><div class="contact-details"><a href="tel:+34679285924">+34 679 285 924</a><span>Avenida Ricardo Soriano 4<br>29601 Marbella, Spain</span></div></div><form class="lead-form" id="lead-form" novalidate><h3>Tell us about your project</h3><p>Share a few details and we will be in touch.</p><div class="form-grid"><label>Full name <span>*</span><input name="name" type="text" autocomplete="name" minlength="2" maxlength="120" required></label><label>Email address <span>*</span><input name="email" type="email" autocomplete="email" maxlength="254" required></label><label>Phone number<input name="phone" type="tel" autocomplete="tel" maxlength="50"></label><label>Project type <span>*</span><select name="projectType" required><option value="">Select a service</option><option value="New-build villa">New-build villa</option><option value="Complete renovation">Complete renovation</option><option value="Interiors and finishes">Interiors and finishes</option><option value="Commercial project">Commercial project</option><option value="Other">Other</option></select></label></div><label>Project location<input name="location" type="text" maxlength="120" placeholder="e.g. Marbella, Estepona"></label><label>Tell us about your plans <span>*</span><textarea name="message" rows="5" minlength="10" maxlength="3000" required></textarea></label><label class="form-consent"><input name="consent" type="checkbox" required><span>I agree that SB Constructions may use my details to respond to this enquiry. <strong>*</strong></span></label><div class="form-honeypot" aria-hidden="true"><label>Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label></div><button class="button button-cream" type="submit">Send enquiry <span aria-hidden="true">↗</span></button><p class="form-status" role="status" aria-live="polite"></p></form></div></section>
   </main>
   <footer><div class="wrap footer-main"><a class="brand dark" href="#top" aria-label="SB Constructions, back to top"><img src="assets/sb-constructions-black.png" alt="" width="1000" height="257"></a><div><span>Built with purpose. Made to live in.</span><a href="#top">BACK TO TOP ↑</a></div></div><div class="wrap footer-bottom"><span>© <span id="year">2026</span> SB Constructions</span><span>MARBELLA · COSTA DEL SOL</span></div></footer>
   <script src="script.js"></script>
