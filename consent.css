@@ -1,0 +1,10 @@
+.consent-banner{position:fixed;z-index:1000;left:20px;right:20px;bottom:20px;max-width:680px;margin:auto;background:#f4f1e9;color:#182822;box-shadow:0 12px 45px #0005;border:1px solid #d7d9cf;padding:22px 26px;display:flex;align-items:center;gap:24px;font-family:inherit}
+.consent-banner[hidden]{display:none}
+.consent-banner strong{display:block;font-size:.95rem;margin-bottom:5px}
+.consent-banner p{font-size:.78rem;line-height:1.5;margin:0}
+.consent-actions{display:flex;gap:8px;flex:none}
+.consent-actions button{border:1px solid #182822;background:transparent;color:#182822;padding:10px 14px;font:inherit;font-size:.76rem;font-weight:700;cursor:pointer}
+.consent-actions button[data-consent="accepted"]{background:#182822;color:#fff}
+.consent-actions button:focus-visible,.consent-settings:focus-visible{outline:2px solid #9b714b;outline-offset:3px}
+.consent-settings{border:0;background:transparent;color:inherit;text-decoration:underline;text-underline-offset:3px;font:inherit;font-size:inherit;cursor:pointer}
+@media(max-width:600px){.consent-banner{display:block;left:12px;right:12px;bottom:12px;padding:18px}.consent-actions{margin-top:15px}.consent-actions button{flex:1}}

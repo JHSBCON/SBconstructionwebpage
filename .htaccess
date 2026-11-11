@@ -1,4 +1,26 @@
 Options -Indexes
+RewriteEngine On
+
+# Keep one public address for every page.
+RewriteCond %{HTTP_HOST} ^sbconstructions\.es$ [NC]
+RewriteRule ^ https://www.sbconstructions.es%{REQUEST_URI} [R=301,L]
+
+# Preserve links to the previous project URLs.
+RewriteCond %{QUERY_STRING} ^slug=villa-olivia$
+RewriteRule ^project\.html$ /projects/villa-olivia.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^slug=villa-clara$
+RewriteRule ^project\.html$ /projects/villa-clara.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^slug=villa-julia$
+RewriteRule ^project\.html$ /projects/villa-julia.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^slug=villa-hibisco$
+RewriteRule ^project\.html$ /projects/villa-hibisco.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^slug=villa-azahar$
+RewriteRule ^project\.html$ /projects/villa-azahar.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^slug=calle-comedias$
+RewriteRule ^project\.html$ /projects/calle-comedias.html? [R=301,L]
+RewriteCond %{QUERY_STRING} ^slug=calle-mosquera$
+RewriteRule ^project\.html$ /projects/calle-mosquera.html? [R=301,L]
+
 <FilesMatch "^(bootstrap\.php|config\.php)$">
   Require all denied
 </FilesMatch>

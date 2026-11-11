@@ -9,6 +9,8 @@ if (!project) {
   document.querySelector('#detail-kicker').textContent = 'SB CONSTRUCTIONS';
   document.querySelector('.detail-main').innerHTML = '<div class="wrap"><p>This project is not available. <a href="projects.html">Explore all projects →</a></p></div>';
 } else {
+  // This page remains only as a fallback for existing project bookmarks.
+  location.replace(`projects/${project.slug}.html`);
   document.title = `${project.name} — SB Constructions`;
   document.querySelector('meta[name="description"]').content = `${project.name}: ${project.type.toLowerCase()} in ${project.location}. Explore the project by SB Constructions.`;
   const cover = document.querySelector('#detail-cover');

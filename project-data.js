@@ -1,4 +1,4 @@
-// Add future projects here, then add a card to projects.html. Keep each project's photo list to three images.
+// Add future projects here and a card to projects.html, then run tools/generate-project-pages.mjs. Use exactly three photos.
 window.sbProjects = [
   {slug:'villa-olivia',name:'Villa Olivia',location:'Nueva Andalucía · Marbella',type:'Complete renovation',description:'A complete interior and exterior reform of a Bali-inspired, six-bedroom villa beside Los Naranjos Golf. The home combines an infinity pool and roof terrace with an indoor pool, sauna and gym.',photos:['villa-olivia-01.jpg','villa-olivia-02.jpg','villa-olivia-03.jpg']},
   {slug:'villa-clara',name:'Villa Clara',location:'Golf Valley · Marbella',type:'Complete renovation',description:'An interior and exterior transformation of a five-bedroom villa that retains its Mediterranean character. Its outdoor spaces bring together a pool, kitchen and places to gather around a fireplace.',photos:['villa-clara-01.jpg','villa-clara-02.jpg','villa-clara-03.jpg']},
