@@ -28,9 +28,21 @@ if (form) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-      if (!response.ok) throw new Error(`Submission failed: ${response.status}`);
+      // The server returns 201 only after saving a genuine enquiry.
+      if (response.status !== 201) throw new Error(`Submission failed: ${response.status}`);
       form.reset();
       status.textContent = 'Thank you. Your enquiry has been received. We will be in touch soon.';
+      try {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'conversion', {
+            'send_to': 'AW-18568725971/mhZMCKqVlLYdENOLoZZF',
+            'value': 1.0,
+            'currency': 'EUR'
+          });
+        }
+      } catch (error) {
+        console.error('Could not record Google Ads conversion', error);
+      }
     } catch {
       status.classList.add('error');
       status.textContent = 'We could not send your enquiry right now. Please try again shortly.';
